@@ -2,7 +2,7 @@
 
 Convert Shearwater (or other) UDDF dive exports into MySSI QR codes. Runs in the browser — nothing is uploaded.
 
-**Live:** [https://silnychyi.github.io/uddf-to-ssi/](https://silnychyi.github.io/uddf-to-ssi/)
+**Live:** [https://ssi.sofacode.dev/](https://ssi.sofacode.dev/)
 
 ## Use
 
@@ -18,7 +18,7 @@ npm run dev
 
 ## Build & GitHub Pages
 
-Static export (`output: "export"`). In CI, `actions/configure-pages` injects `basePath` for project sites (`username.github.io/repo`).
+Static export (`output: "export"`) served at the custom domain root.
 
 ```bash
 npm run build   # writes ./out

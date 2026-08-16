@@ -8,26 +8,26 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "SSI QR",
     description:
       "Convert Shearwater and other UDDF dive exports into MySSI QR codes.",
-    start_url: "./",
+    start_url: "/",
     display: "standalone",
     background_color: "#0a0a0a",
     theme_color: "#e22118",
     lang: "en",
     icons: [
       {
-        src: "./favicon.svg",
+        src: "/favicon.svg",
         sizes: "any",
         type: "image/svg+xml",
         purpose: "any",
       },
       {
-        src: "./favicon.png",
+        src: "/favicon.png",
         sizes: "32x32",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "./apple-touch-icon.png",
+        src: "/apple-touch-icon.png",
         sizes: "180x180",
         type: "image/png",
         purpose: "any",

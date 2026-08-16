@@ -6,6 +6,7 @@ import {
   SITE_KEYWORDS,
   SITE_NAME,
   SITE_TITLE,
+  SITE_URL,
 } from "@/lib/site";
 
 const body = Outfit({
@@ -15,13 +16,18 @@ const body = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: SITE_KEYWORDS,
   category: "diving",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
+    url: SITE_URL,
     siteName: SITE_NAME,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -35,22 +41,21 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  // Relative paths so GitHub project pages resolve under /repo/ (not github.io root)
   icons: {
     icon: [
-      { url: "./favicon.svg", type: "image/svg+xml" },
-      { url: "./favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "./favicon.ico", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.ico", sizes: "32x32" },
     ],
     apple: [
       {
-        url: "./apple-touch-icon.png",
+        url: "/apple-touch-icon.png",
         type: "image/png",
         sizes: "180x180",
       },
     ],
   },
-  manifest: "./manifest.webmanifest",
+  manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {

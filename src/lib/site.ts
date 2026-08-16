@@ -1,3 +1,5 @@
+export const SITE_URL = "https://ssi.sofacode.dev";
+
 export const SITE_NAME = "UDDF to SSI QR";
 
 export const SITE_TITLE =
