@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UDDF → SSI QR
 
-## Getting Started
+Convert Shearwater (or other) UDDF dive exports into MySSI QR codes. Runs in the browser — nothing is uploaded.
 
-First, run the development server:
+**Live:** [https://silnychyi.github.io/uddf-to-ssi/](https://silnychyi.github.io/uddf-to-ssi/)
+
+## Use
+
+1. Export a dive as UDDF from Shearwater Desktop (or Subsurface).
+2. Drop the file here and scan the QR in the SSI app.
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & GitHub Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Static export (`output: "export"`). In CI, `actions/configure-pages` injects `basePath` for project sites (`username.github.io/repo`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # writes ./out
+```
 
-## Learn More
+Push to `main` to deploy via [.github/workflows/nextjs.yml](.github/workflows/nextjs.yml), or:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run deploy  # gh-pages -d out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Enable **Settings → Pages → GitHub Actions** on the repo.

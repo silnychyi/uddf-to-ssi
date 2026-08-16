@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uddf xmlns="http://www.streit.cc/uddf/3.2/" version="3.2.3">
+  <generator>
+    <name>Shearwater Cloud Desktop</name>
+  </generator>
+  <profiledata>
+    <repetitiongroup>
+      <dive id="1019516271786372016">
+        <informationbeforedive>
+          <link ref="profile_1019516271786372016" />
+          <divenumber>11</divenumber>
+          <datetime>2026-08-10T14:26:56Z</datetime>
+        </informationbeforedive>
+        <samples>
+          <waypoint>
+            <depth>1.9</depth>
+            <divetime>0</divetime>
+            <temperature>301.15</temperature>
+            <divemode type="opencircuit" />
+          </waypoint>
+          <waypoint>
+            <depth>6.6</depth>
+            <divetime>1200</divetime>
+            <temperature>301.15</temperature>
+            <divemode type="opencircuit" />
+          </waypoint>
+        </samples>
+        <informationafterdive>
+          <greatestdepth>6.6</greatestdepth>
+          <diveduration>2491</diveduration>
+        </informationafterdive>
+      </dive>
+    </repetitiongroup>
+  </profiledata>
+  <tablegeneration>
+    <calculateprofile>
+      <profile id="profile_1019516271786372016">
+        <density>1020</density>
+      </profile>
+    </calculateprofile>
+  </tablegeneration>
+</uddf>
