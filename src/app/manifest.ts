@@ -22,13 +22,13 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: "any",
       },
       {
-        src: withBasePath("/icon"),
+        src: withBasePath("/favicon.png"),
         sizes: "32x32",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: withBasePath("/apple-icon"),
+        src: withBasePath("/apple-touch-icon.png"),
         sizes: "180x180",
         type: "image/png",
         purpose: "any",

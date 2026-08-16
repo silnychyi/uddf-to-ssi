@@ -39,10 +39,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: withBasePath("/favicon.svg"), type: "image/svg+xml" },
-      { url: withBasePath("/icon"), type: "image/png", sizes: "32x32" },
+      { url: withBasePath("/favicon.png"), type: "image/png", sizes: "32x32" },
+      { url: withBasePath("/favicon.ico"), sizes: "32x32" },
     ],
     apple: [
-      { url: withBasePath("/apple-icon"), type: "image/png", sizes: "180x180" },
+      {
+        url: withBasePath("/apple-touch-icon.png"),
+        type: "image/png",
+        sizes: "180x180",
+      },
     ],
   },
   manifest: withBasePath("/manifest.webmanifest"),
