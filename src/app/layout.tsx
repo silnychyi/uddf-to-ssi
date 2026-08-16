@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { withBasePath } from "@/lib/paths";
 import {
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
@@ -36,21 +35,22 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // Relative paths so GitHub project pages resolve under /repo/ (not github.io root)
   icons: {
     icon: [
-      { url: withBasePath("/favicon.svg"), type: "image/svg+xml" },
-      { url: withBasePath("/favicon.png"), type: "image/png", sizes: "32x32" },
-      { url: withBasePath("/favicon.ico"), sizes: "32x32" },
+      { url: "./favicon.svg", type: "image/svg+xml" },
+      { url: "./favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "./favicon.ico", sizes: "32x32" },
     ],
     apple: [
       {
-        url: withBasePath("/apple-touch-icon.png"),
+        url: "./apple-touch-icon.png",
         type: "image/png",
         sizes: "180x180",
       },
     ],
   },
-  manifest: withBasePath("/manifest.webmanifest"),
+  manifest: "./manifest.webmanifest",
 };
 
 export const viewport: Viewport = {
