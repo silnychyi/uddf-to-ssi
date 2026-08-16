@@ -1,6 +1,8 @@
 import Image from "next/image";
 import DiveQrTool from "@/components/DiveQrTool";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from "@/lib/site";
+import shearwaterLogo from "@/img/shearwater.png";
+import ssiLogo from "@/img/ssi.webp";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -72,7 +74,7 @@ export default function HomePage() {
         <header className="mb-10">
           <div className="flex items-center justify-center gap-4 sm:gap-5">
             <Image
-              src="/img/shearwater.png"
+              src={shearwaterLogo}
               alt="Shearwater dive computer brand logo"
               width={120}
               height={120}
@@ -86,7 +88,7 @@ export default function HomePage() {
               →
             </span>
             <Image
-              src="/img/ssi.webp"
+              src={ssiLogo}
               alt="SSI Scuba Schools International logo"
               width={120}
               height={120}

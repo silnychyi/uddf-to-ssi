@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { withBasePath } from "@/lib/paths";
 import {
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
@@ -37,12 +38,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "./favicon.svg", type: "image/svg+xml" },
-      { url: "./icon", type: "image/png", sizes: "32x32" },
+      { url: withBasePath("/favicon.svg"), type: "image/svg+xml" },
+      { url: withBasePath("/icon"), type: "image/png", sizes: "32x32" },
     ],
-    apple: [{ url: "./apple-icon", type: "image/png", sizes: "180x180" }],
+    apple: [
+      { url: withBasePath("/apple-icon"), type: "image/png", sizes: "180x180" },
+    ],
   },
-  manifest: "./manifest.webmanifest",
+  manifest: withBasePath("/manifest.webmanifest"),
 };
 
 export const viewport: Viewport = {
